@@ -1,0 +1,190 @@
+/* Font */
+    /* Indie Flower */
+    @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
+body, html, .container{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+body{
+    font-family: sans-serif, Century Gothic, Arial;
+    text-align: center;
+}
+.container{
+    background: -webkit-radial-gradient(
+                    #407BA0,
+                    #214154,
+                    #13242F
+                    );
+}
+
+/* Título de la página */
+h1{
+    color: #eee;
+    margin: 0;
+    padding-top: 20px;
+}
+
+/* Planeta */
+.nubes, .mapa{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+}
+.nubes{
+    width: 220px;
+    height: 220px;
+}
+.nubes img{
+    position: relative;
+    z-index: 20;
+}
+.mapa{
+    width: 200px;
+    height: 200px;
+    background: lightblue;
+    border-radius: 50%;
+    box-shadow: -30px -20px 0 0 rgba(0,0,0, .1) inset,
+                -70px -30px 0 0  rgba(0,0,0,.1) inset,
+                5px 5px 0 0 rgba(255, 255, 255, .2) inset;
+    background: url(../img/mapa.png);
+    background-size: cover;
+
+    -webkit-animation: "tierra-girando" 5s infinite linear;
+
+}
+@-webkit-keyframes tierra-girando{
+    from{
+        background-position: left center;
+    }
+    to{
+        background-position: -396px center;
+    }
+}
+
+/* Texto */
+#txt-container{
+    width: 30vw;
+    position: absolute;
+    top: 25%;
+    left: 63%;
+    z-index: 30;
+    font-family: 'Indie Flower', cursive;
+    color: #eee;
+    text-align: left;
+}
+.txt--p a{
+    text-decoration: none;
+    color: rgb(221, 240, 89); /* Mismo color verde, pero mas saturado*/
+}
+.txt--p a:hover{
+    text-decoration: underline;
+}
+
+/* - Estrellas - */
+.estrellas{
+    height: 2px;
+    width: 2px;
+    background: #fff;
+    position: absolute;
+    border-radius: 50%;
+}
+.primera{
+    top: 25%;
+    left: 50%;
+}
+.segunda{
+    top: 31%;
+    left: 30%;
+}
+.tercera{
+    top: 90%;
+    left: 90%;
+}
+.cuarta{
+    top: 80%;
+    left: 20%;
+}
+.quinta{
+    top: 75%;
+    left: 10%;
+}
+.sexta{
+    top: 35%;
+    left: 75%;
+}
+.septima{
+    top: 80%;
+    left: 65%
+}
+.octava{
+    top: 90%;
+    left: 29%;
+}
+.novena{
+    top: 15%;
+    left: 90%;
+}
+.decima{
+    top: 11%;
+    left: 5%;
+}
+.estrellas:nth-child(2n){
+    -webkit-animation: estrella-par 3s infinite;
+}
+@-webkit-keyframes estrella-par{
+    0%, 90%{
+        box-shadow: 0 0 0 3px rgba(255, 255, 255, .3);
+    }
+    100%{
+        box-shadow: 0 0 16px 16px rgba(255, 255, 255, .3);
+    }
+}
+.estrellas:nth-child(2n+1){
+    -webkit-animation: estrella-impar 2s infinite;
+}
+@-webkit-keyframes estrella-impar{
+    0%, 35%, 50%{
+        box-shadow: 0 0 0 3px rgba(255, 255, 255, .3);
+    }
+    45%{
+        box-shadow: 0 0 16px 16px rgba(255, 255, 255, .3);
+    }
+}
+
+/* FOOTER */
+footer#footer{
+    height: 100px;
+    width: 100%;
+    position: absolute;
+    top: calc(100vh - 100px);
+    left: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.redes{
+    transition: .3s;
+}
+.redes:hover{
+    box-shadow: 0 0 16px 16px rgba(255, 255, 255, .3);
+    background: rgba(255, 255, 255, .3);
+    border-radius: 50%;
+}
+.redes a{
+    text-decoration: none;
+    color: #fff;
+    border-radius: 100%;
+    font-size: 30px;
+}
+.redes a i{
+    border-radius: 100%;
+
+}

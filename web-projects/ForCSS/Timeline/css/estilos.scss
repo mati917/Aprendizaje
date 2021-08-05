@@ -1,0 +1,78 @@
+html{
+    body{
+        .container-fluid{
+            position: relative;
+            header{
+                text-align: center;
+                margin: 30px 0 60px 0;
+                color: #333;
+                a{
+                    color: #77acee;
+                }
+                #header--hr{
+                    width: 80%;
+                    height: 1px;
+                    background: #ddd;
+                    display: block;
+                    margin: 5px auto;
+                }
+            }
+            #timeline{
+                padding:0;
+                margin: 100px auto;
+                display: flex;
+                position: relative;
+                width: 80vw;
+                #line{
+                    height: 100%;
+                    width: 2px;
+                    position: absolute;
+                    background: #ddd;
+                    padding: 0;
+                    top: 0;
+                    left: 50%;
+                }
+                .row{
+                    margin: 0;
+                    padding: 10px 0;
+                }
+
+                @media only screen and (min-width: 576px){
+                    .row{
+                        .card{
+                            width: 45%;
+                            z-index: 20;
+                            .checkpoint{
+                                width: 20px;
+                                height: 20px;
+                                border-radius: 50%;
+                                background: #77acee;
+                                position: absolute;
+                                top: calc(50% - 10px);
+                                left: 0;
+                            }
+                        }
+                        .card:nth-child(odd){
+                            float: left;
+                            margin-right: 55%;
+                            .checkpoint{
+                                transform: translateX(calc(40vw - 10px));
+                            }
+                            
+                        }
+                        .card:nth-child(even){
+                            float: right;
+                            margin-left: 55%;
+                            .checkpoint{
+                                transform: translateX(calc(-5vw - 2px));
+                            }
+                        }
+                    }
+                    #line{
+                        z-index: -1;
+                    }
+                }
+            }
+        }
+    }
+}

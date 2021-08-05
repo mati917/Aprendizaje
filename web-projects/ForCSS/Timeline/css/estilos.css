@@ -1,0 +1,82 @@
+html body .container-fluid {
+  position: relative;
+}
+
+html body .container-fluid header {
+  text-align: center;
+  margin: 30px 0 60px 0;
+  color: #333;
+}
+
+html body .container-fluid header a {
+  color: #77acee;
+}
+
+html body .container-fluid header #header--hr {
+  width: 80%;
+  height: 1px;
+  background: #ddd;
+  display: block;
+  margin: 5px auto;
+}
+
+html body .container-fluid #timeline {
+  padding: 0;
+  margin: 100px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  width: 80vw;
+}
+
+html body .container-fluid #timeline #line {
+  height: 100%;
+  width: 2px;
+  position: absolute;
+  background: #ddd;
+  padding: 0;
+  top: 0;
+  left: 50%;
+}
+
+html body .container-fluid #timeline .row {
+  margin: 0;
+  padding: 10px 0;
+}
+
+@media only screen and (min-width: 576px) {
+  html body .container-fluid #timeline .row .card {
+    width: 45%;
+    z-index: 20;
+  }
+  html body .container-fluid #timeline .row .card .checkpoint {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #77acee;
+    position: absolute;
+    top: calc(50% - 10px);
+    left: 0;
+  }
+  html body .container-fluid #timeline .row .card:nth-child(odd) {
+    float: left;
+    margin-right: 55%;
+  }
+  html body .container-fluid #timeline .row .card:nth-child(odd) .checkpoint {
+    -webkit-transform: translateX(calc(40vw - 10px));
+            transform: translateX(calc(40vw - 10px));
+  }
+  html body .container-fluid #timeline .row .card:nth-child(even) {
+    float: right;
+    margin-left: 55%;
+  }
+  html body .container-fluid #timeline .row .card:nth-child(even) .checkpoint {
+    -webkit-transform: translateX(calc(-5vw - 2px));
+            transform: translateX(calc(-5vw - 2px));
+  }
+  html body .container-fluid #timeline #line {
+    z-index: -1;
+  }
+}
+/*# sourceMappingURL=estilos.css.map */
